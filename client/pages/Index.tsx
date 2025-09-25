@@ -317,22 +317,22 @@ export default function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="w-full bg-white px-[331px] py-20">
-        <div className="flex flex-col items-center gap-12">
-          <h2 className="font-inter text-[40px] font-bold leading-[125%] text-dark-blue text-center">
+      <section className="w-full bg-white px-4 md:px-[331px] py-12 md:py-20">
+        <div className="flex flex-col items-center gap-8 md:gap-12">
+          <h2 className="font-inter text-2xl md:text-3xl lg:text-[40px] font-bold leading-[125%] text-dark-blue text-center px-4">
             Frequently Asked Questions
           </h2>
-          <div className="flex flex-col gap-8 w-[777px]">
+          <div className="flex flex-col gap-6 md:gap-8 w-full max-w-[777px]">
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="flex flex-col gap-6">
-                <div 
+              <div key={item} className="flex flex-col gap-4 md:gap-6">
+                <div
                   className="flex items-center justify-between cursor-pointer"
                   onClick={() => toggleFaq(item)}
                 >
-                  <h3 className="font-inter text-2xl font-bold leading-[164%] text-dark-blue">
+                  <h3 className="font-inter text-lg md:text-2xl font-bold leading-[164%] text-dark-blue">
                     Question #{item}
                   </h3>
-                  <ChevronDown 
+                  <ChevronDown
                     className={`w-3 h-2 text-[#333] transition-transform ${
                       openFaq === item ? 'rotate-180' : ''
                     }`}
@@ -346,19 +346,19 @@ export default function Index() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="w-full bg-brand-gray px-[90px] py-20">
-        <div className="max-w-[1303px] mx-auto flex items-start gap-20">
-          <div className="w-[586px] flex flex-col gap-8">
+      <section className="w-full bg-brand-gray px-4 md:px-[90px] py-12 md:py-20">
+        <div className="max-w-[1303px] mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-20">
+          <div className="w-full lg:w-[586px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
-              <p className="text-[#333] font-lato text-xl leading-[150%]">
+              <p className="text-[#333] font-lato text-lg md:text-xl leading-[150%]">
                 Over 90% of tech recruiters reject 'freshers' for one reason: no real-world projects.
               </p>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6 md:gap-8">
                 <div className="flex flex-col gap-4">
-                  <h2 className="font-inter text-[42px] font-bold leading-[120%] text-black">
+                  <h2 className="font-inter text-2xl md:text-3xl lg:text-[42px] font-bold leading-[120%] text-black">
                     Your Career Won't Wait. Why Should You?
                   </h2>
-                  <p className="text-[#333] font-lato text-xl leading-[150%] text-justify">
+                  <p className="text-[#333] font-lato text-lg md:text-xl leading-[150%] text-justify">
                     This is the moment you stop being a "fresher" and start becoming a professional. Every day you wait is another day a competitor is building the portfolio that will land them the job you want. BroskiesHub is your direct path from a theoretical degree to a tangible, job-winning portfolio that proves you are ready. The choice is simple: wait for an opportunity, or build one right now.
                   </p>
                   <div className="flex flex-col gap-2">
@@ -366,7 +366,7 @@ export default function Index() {
                       <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
                         <Check className="w-4 h-4 text-black" />
                       </div>
-                      <span className="font-inter text-xl text-[#333]">
+                      <span className="font-inter text-lg md:text-xl text-[#333]">
                         Build a Professional, Job-Winning Portfolio
                       </span>
                     </div>
@@ -374,7 +374,7 @@ export default function Index() {
                       <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
                         <Check className="w-4 h-4 text-black" />
                       </div>
-                      <span className="font-inter text-xl text-[#333]">
+                      <span className="font-inter text-lg md:text-xl text-[#333]">
                         Get Expert Feedback & Industry Mentorship
                       </span>
                     </div>
@@ -382,26 +382,26 @@ export default function Index() {
                       <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
                         <Check className="w-4 h-4 text-black" />
                       </div>
-                      <span className="font-inter text-xl text-[#333]">
+                      <span className="font-inter text-lg md:text-xl text-[#333]">
                         Unlock Direct Referrals to Hiring Startups
                       </span>
                     </div>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <button className="bg-brand-blue-alt text-white font-bold font-lato text-xl px-14 py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
+                  <button className="bg-brand-blue-alt text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
                     Start Building Now (It's Free)
                   </button>
                 </div>
               </div>
-              <p className="text-[#333] font-lato text-base font-bold uppercase">
+              <p className="text-[#333] font-lato text-sm md:text-base font-bold uppercase">
                 100% Free. No certificate fee.
               </p>
             </div>
           </div>
-          <div className="w-[637px] h-[530px] border-2 border-black bg-white flex items-center justify-center">
-            <div className="text-center px-[157px] py-[166px]">
-              <p className="font-open-sans text-2xl text-black">
+          <div className="w-full lg:w-[637px] h-64 md:h-96 lg:h-[530px] border-2 border-black bg-white flex items-center justify-center">
+            <div className="text-center px-8 md:px-[157px] py-8 md:py-[166px]">
+              <p className="font-open-sans text-lg md:text-2xl text-black">
                 <span className="font-bold">Image or video </span>
                 that helps reinforce core value proposition and articulate what it is you do
               </p>
@@ -411,9 +411,9 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-white border border-black px-[90px] py-20">
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-12">
-          <h2 className="w-[748px] text-center font-inter text-[44px] font-bold leading-[120%] text-black">
+      <footer className="w-full bg-white border border-black px-4 md:px-[90px] py-12 md:py-20">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-8 md:gap-12">
+          <h2 className="max-w-[748px] text-center font-inter text-2xl md:text-3xl lg:text-[44px] font-bold leading-[120%] text-black px-4">
             Footer
           </h2>
         </div>
