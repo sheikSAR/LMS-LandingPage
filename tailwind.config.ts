@@ -13,7 +13,18 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'lato': ['Lato', 'sans-serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+      },
       colors: {
+        // BroskiesHub brand colors
+        'brand-blue': '#2727E6',
+        'brand-blue-alt': '#2626E7',
+        'brand-gray': '#EBEBEB',
+        'subtext': '#363328',
+        'dark-blue': '#241B41',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
