@@ -33,36 +33,36 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="px-[90px] py-16 pb-16">
-        <div className="max-w-[1303px] mx-auto flex items-start gap-20">
-          <div className="w-[586px] flex flex-col gap-8">
+      <section className="px-4 md:px-[90px] py-8 md:py-16">
+        <div className="max-w-[1303px] mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-20">
+          <div className="w-full lg:w-[586px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
-              <p className="text-[#333] font-lato text-xl leading-[150%]">
+              <p className="text-[#333] font-lato text-lg md:text-xl leading-[150%]">
                 Join over 2700+ students from 100+ colleges who are building their experience with us.
               </p>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6 md:gap-8">
                 <div className="flex flex-col gap-4">
-                  <h1 className="font-inter text-[56px] font-bold leading-[120%] text-black">
+                  <h1 className="font-inter text-3xl md:text-4xl lg:text-[56px] font-bold leading-[120%] text-black">
                     Build the Experience, Get the Job
                   </h1>
-                  <p className="text-[#333] font-lato text-xl leading-[150%] text-justify">
+                  <p className="text-[#333] font-lato text-lg md:text-xl leading-[150%] text-justify">
                     No more being told you need 'experience' to get your first job. BroskiesHub is where you build that experience. We provide a structured, 3-phase program that guides you through building a complete, real-world simulated project. You go beyond theory, write production-level code, and develop the professional portfolio that bypasses the 'fresher' tag. Your completed project is your entry ticket to referrals with our partner companies.
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <button className="bg-brand-blue text-white font-bold font-lato text-xl px-14 py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
+                  <button className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
                     Build Your Portfolio (It's Free)
                   </button>
                 </div>
               </div>
-              <p className="text-[#333] font-lato text-base font-bold uppercase">
+              <p className="text-[#333] font-lato text-sm md:text-base font-bold uppercase">
                 100% Free. No certificate fee.
               </p>
             </div>
           </div>
-          <div className="w-[637px] h-[530px] border-2 border-black bg-white flex items-center justify-center">
-            <div className="text-center px-[157px] py-[166px]">
-              <p className="font-open-sans text-2xl text-black">
+          <div className="w-full lg:w-[637px] h-64 md:h-96 lg:h-[530px] border-2 border-black bg-white flex items-center justify-center">
+            <div className="text-center px-8 md:px-[157px] py-8 md:py-[166px]">
+              <p className="font-open-sans text-lg md:text-2xl text-black">
                 <span className="font-bold">Image or video </span>
                 that helps reinforce core value proposition and articulate what it is you do
               </p>
