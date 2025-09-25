@@ -114,7 +114,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="w-full px-4 md:px-[42px] py-4 bg-white">
+      <nav className="w-full px-4 md:px-[42px] py-4 bg-white/90 sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-black/10">
         <div className="max-w-[1303px] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
             <img
