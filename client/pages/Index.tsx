@@ -98,40 +98,40 @@ export default function Index() {
       </section>
 
       {/* Certificate Section */}
-      <section className="w-full bg-white border border-black px-[90px] py-20">
-        <div className="max-w-[836px] mx-auto flex flex-col items-center gap-8">
+      <section className="w-full bg-white border border-black px-4 md:px-[90px] py-12 md:py-20">
+        <div className="max-w-[836px] mx-auto flex flex-col items-center gap-6 md:gap-8">
           <div className="flex flex-col items-center gap-4">
-            <h2 className="text-center font-inter text-[44px] font-bold leading-[120%] text-black">
+            <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[44px] font-bold leading-[120%] text-black px-4">
               Don't Buy a Certificate to Get a Job. Build the Experience That Proves You're Job-Ready
             </h2>
-            <p className="w-[740px] text-center font-lato text-lg leading-[150%] text-[#333]">
+            <p className="max-w-[740px] text-center font-lato text-base md:text-lg leading-[150%] text-[#333] px-4">
               You're caught in the Fresher's Paradox because degrees and tutorials aren't proof of skill. A real project is. As an Experience Accelerator, we provide the platform to build that project—the verifiable proof that beats the "experience required" trap and gets you hired.
             </p>
           </div>
-          <button className="bg-brand-blue-alt text-white font-bold font-lato text-xl px-14 py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
+          <button className="bg-brand-blue-alt text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
             Start Building Your Experience
           </button>
         </div>
       </section>
 
       {/* Features Section 1 */}
-      <section className="bg-white px-[120px] py-20 pb-10">
-        <div className="flex items-center gap-[92px]">
-          <img 
-            src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148" 
-            alt="Build Portfolio" 
-            className="w-[574px] h-[534px] border border-black"
+      <section className="bg-white px-4 md:px-[120px] py-12 md:py-20 pb-8 md:pb-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-[92px]">
+          <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148"
+            alt="Build Portfolio"
+            className="w-full lg:w-[574px] h-64 md:h-96 lg:h-[534px] border border-black object-cover"
           />
-          <div className="w-[534px] flex flex-col gap-8">
+          <div className="w-full lg:w-[534px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
-              <h3 className="font-inter text-[40px] font-bold leading-[120%] text-black">
+              <h3 className="font-inter text-2xl md:text-3xl lg:text-[40px] font-bold leading-[120%] text-black">
                 Build a Job-Winning Portfolio
               </h3>
-              <p className="font-open-sans text-base leading-[150%] text-subtext text-justify">
+              <p className="font-open-sans text-sm md:text-base leading-[150%] text-subtext text-justify">
                 Our solution ensures you build a multi-dimensional portfolio that gets you hired. We do this through our proprietary 3-phase program that guides you from mastering foundational skills with hands-on tasks, to building a complete application from a real-world project brief, and finally, to creating a unique innovation project that showcases your personal creativity to employers.
               </p>
             </div>
-            <button className="bg-brand-blue-alt text-white font-bold font-lato text-base px-14 py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
+            <button className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
               Build the Proof of Your Skills
             </button>
           </div>
@@ -139,47 +139,47 @@ export default function Index() {
       </section>
 
       {/* Features Section 2 */}
-      <section className="bg-white px-[120px] py-10">
-        <div className="flex items-center gap-[92px]">
-          <div className="w-[534px] flex flex-col gap-8">
+      <section className="bg-white px-4 md:px-[120px] py-8 md:py-10">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-[92px]">
+          <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148"
+            alt="Get Referrals"
+            className="w-full lg:w-[574px] h-64 md:h-96 lg:h-[534px] border border-black object-cover"
+          />
+          <div className="w-full lg:w-[534px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
-              <h3 className="font-inter text-[40px] font-bold leading-[120%] text-black">
+              <h3 className="font-inter text-2xl md:text-3xl lg:text-[40px] font-bold leading-[120%] text-black">
                 Get Direct Referrals to Hiring Companies
               </h3>
-              <p className="font-open-sans text-base leading-[150%] text-subtext text-justify">
+              <p className="font-open-sans text-sm md:text-base leading-[150%] text-subtext text-justify">
                 Our solution creates a direct path from experience to opportunity. We accomplish this by tracking your performance on real projects, creating a comprehensive skill profile that goes far beyond a resume, and sharing this verified profile directly with our network of partner companies who are actively hiring for roles that match your new experience.
               </p>
             </div>
-            <button className="bg-brand-blue-alt text-white font-bold font-lato text-base px-14 py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
+            <button className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
               Unlock Job Opportunities
             </button>
           </div>
-          <img 
-            src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148" 
-            alt="Get Referrals" 
-            className="w-[574px] h-[534px] border border-black"
-          />
         </div>
       </section>
 
       {/* Features Section 3 */}
-      <section className="bg-white px-[120px] py-10 pb-20">
-        <div className="flex items-center gap-[92px]">
-          <img 
-            src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148" 
-            alt="Expert Feedback" 
-            className="w-[574px] h-[534px] border border-black"
+      <section className="bg-white px-4 md:px-[120px] py-8 md:py-10 pb-12 md:pb-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-[92px]">
+          <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148"
+            alt="Expert Feedback"
+            className="w-full lg:w-[574px] h-64 md:h-96 lg:h-[534px] border border-black object-cover"
           />
-          <div className="w-[534px] flex flex-col gap-8">
+          <div className="w-full lg:w-[534px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
-              <h3 className="font-inter text-[40px] font-bold leading-[120%] text-black">
+              <h3 className="font-inter text-2xl md:text-3xl lg:text-[40px] font-bold leading-[120%] text-black">
                 Receive Feedback from Industry Experts
               </h3>
-              <p className="font-open-sans text-base leading-[150%] text-subtext text-justify">
+              <p className="font-open-sans text-sm md:text-base leading-[150%] text-subtext text-justify">
                 Our solution provides a multi-layered support system to ensure you grow to a professional standard. Our unique approach involves providing instant, AI-powered feedback on daily tasks to accelerate your learning, conducting structured review sessions with industry mentors to guide your project development, and facilitating a community forum for continuous peer-to-peer support.
               </p>
             </div>
-            <button className="bg-brand-blue-alt text-white font-bold font-lato text-base px-14 py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
+            <button className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
               Get Professional Feedback Now
             </button>
           </div>
