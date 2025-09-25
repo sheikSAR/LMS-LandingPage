@@ -11,21 +11,21 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="w-full px-[42px] py-4 bg-white">
+      <nav className="w-full px-4 md:px-[42px] py-4 bg-white">
         <div className="max-w-[1303px] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/af5815d5c8e98fab36d2793c7dc62abb9e93d0ce?width=322" 
-              alt="BroskiesHub Logo" 
-              className="h-8"
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/af5815d5c8e98fab36d2793c7dc62abb9e93d0ce?width=322"
+              alt="BroskiesHub Logo"
+              className="h-6 md:h-8"
             />
           </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 bg-brand-blue rounded-full px-6 py-2">
-              <Phone className="w-5 h-5 text-white" />
-              <span className="text-white font-bold text-lg">+918148040507</span>
+          <div className="flex items-center gap-2 md:gap-6">
+            <div className="flex items-center gap-2 md:gap-4 bg-brand-blue rounded-full px-3 md:px-6 py-2">
+              <Phone className="w-4 h-4 md:w-5 md:h-5 text-white" />
+              <span className="text-white font-bold text-sm md:text-lg">+918148040507</span>
             </div>
-            <button className="px-8 py-4 border border-black bg-white font-bold text-black hover:bg-gray-50 transition-colors">
+            <button className="px-4 md:px-8 py-2 md:py-4 border border-black bg-white font-bold text-black hover:bg-gray-50 transition-colors text-sm md:text-base">
               For Companies
             </button>
           </div>
