@@ -1,5 +1,108 @@
 import React, { useState } from 'react';
-import { ChevronDown, Check, Phone } from 'lucide-react';
+import { ChevronDown, Check, Phone, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const testimonials = [
+  {
+    id: '1',
+    videoUrl: 'https://res.cloudinary.com/dk2wudmxh/video/upload/v1756210706/mohd_anas_curu7f.mp4',
+    studentName: 'MOHD ANAS',
+    rating: 5,
+    college: 'Indian Institute of Technology, Madras',
+    course: 'Internship Program',
+    testimonialText: 'It was a very nice experience and I gained a lot of experience and skills.'
+  },
+  {
+    id: '2',
+    videoUrl: 'https://res.cloudinary.com/dk2wudmxh/video/upload/v1756150951/WhatsApp_Video_2025-08-26_at_01.10.01_e4ea9161_ma5xr2.mp4',
+    studentName: 'Dashami Jituri',
+    rating: 4,
+    college: 'Usha Mittal Institute of Technology, SNDT University, Mumbai',
+    course: 'Development Internship',
+    testimonialText: 'My experience at BroskiesHub was both enriching and transformative. I not only strengthened my technical foundation through real-world project development but also learned the importance of creativity, innovation, and attention to detail. The supportive environment encouraged me to go beyond requirements and build a project that truly stands out.'
+  },
+  {
+    id: '3',
+    videoUrl: 'https://res.cloudinary.com/dk2wudmxh/video/upload/v1756150952/WhatsApp_Video_2025-08-26_at_01.10.01_45d1e2b0_pwt6qp.mp4',
+    studentName: 'Firdaush Alam',
+    rating: 5,
+    college: 'Secab Institute of Engineering and Technology',
+    course: 'Python Development Internship',
+    testimonialText: 'During my internship at BroskiesHub, I gained valuable hands-on experience working as a Python Developer. I collaborated on multiple projects involving React, Flask, RESTful APIs, and database management, which enhanced my full-stack development skills. The supportive environment helped me grow technically and professionally, preparing me well for real-world software development challenges.'
+  },
+  {
+    id: '4',
+    videoUrl: 'https://res.cloudinary.com/dk2wudmxh/video/upload/v1756150951/WhatsApp_Video_2025-08-26_at_01.10.00_aecd1003_ujhxts.mp4',
+    studentName: 'Jivika K Ambade',
+    rating: 4,
+    college: 'SNDTWU',
+    course: 'Internship Program',
+    testimonialText: 'It was amazing. The team was really supportive throughout the internship. I never thought I would be chosen as a top performer but my efforts paid off and I was chosen as one of the top performers'
+  },
+  {
+    id: '5',
+    videoUrl: 'https://res.cloudinary.com/dk2wudmxh/video/upload/v1756150952/WhatsApp_Video_2025-08-26_at_01.09.57_b8494776_xho0mo.mp4',
+    studentName: 'Atharva Mandlik',
+    rating: 5,
+    college: 'MIT-WPU PUNE',
+    course: 'Python Development Internship',
+    testimonialText: 'My internship at BroskiesHub was a valuable learning experience where I gained hands-on exposure to real-world Python development. I had the opportunity to build a complete Restaurant Billing ERP System, which enhanced my skills in GUI design, database management, and project structuring. The supportive environment at BroskiesHub helped me strengthen both my technical expertise and problem-solving abilities.'
+  },
+  {
+    id: '6',
+    videoUrl: 'https://res.cloudinary.com/dk2wudmxh/video/upload/v1756150951/WhatsApp_Video_2025-08-26_at_01.09.57_4c45e0bb_dmncwj.mp4',
+    studentName: 'GUNGUN PAL',
+    rating: 5,
+    college: 'ABDUL KALAM TECHNICAL UNIVERSITY',
+    course: 'Development Internship',
+    testimonialText: 'My experience was amazing at BroskiesHub, I got hands on experience on several skills through this internship with solving from basic tasks to building a real life project.'
+  }
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+};
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } }
+};
+
+function Stars({ value }: { value: number }) {
+  return (
+    <div className="flex items-center gap-1">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Star key={i} className={`w-4 h-4 ${i < value ? 'text-yellow-500 fill-yellow-500' : 'text-gray-300'}`} />
+      ))}
+    </div>
+  );
+}
+
+function TestimonialCard({ t }: { t: (typeof testimonials)[number] }) {
+  return (
+    <motion.div variants={fadeUp} className="group overflow-hidden rounded-xl border border-black bg-white shadow-sm hover:shadow-xl transition-shadow">
+      <div className="relative aspect-[16/9] bg-black">
+        <video
+          src={t.videoUrl}
+          controls
+          playsInline
+          preload="metadata"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="p-4 md:p-5 flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <h4 className="font-inter font-semibold text-lg md:text-xl text-black">{t.studentName}</h4>
+          <Stars value={t.rating} />
+        </div>
+        <p className="text-sm md:text-base text-[#333] font-lato">{t.college}</p>
+        <p className="text-xs md:text-sm font-medium text-brand-blue uppercase">{t.course}</p>
+        <p className="text-sm md:text-base text-subtext font-open-sans mt-1">{t.testimonialText}</p>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
