@@ -72,26 +72,26 @@ export default function Index() {
       </section>
 
       {/* Social Proof Section 1 */}
-      <section className="w-full bg-brand-gray border border-black px-[90px] py-20">
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-12">
-          <div className="flex flex-col items-center gap-12 w-full">
-            <h2 className="w-[748px] text-center font-inter text-[44px] font-bold leading-[120%] text-black">
+      <section className="w-full bg-brand-gray border border-black px-4 md:px-[90px] py-12 md:py-20">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-8 md:gap-12">
+          <div className="flex flex-col items-center gap-8 md:gap-12 w-full">
+            <h2 className="max-w-[748px] text-center font-inter text-2xl md:text-3xl lg:text-[44px] font-bold leading-[120%] text-black px-4">
               Don't Just Take Our Word For It. See What Our Interns Have Built.
             </h2>
-            <p className="text-center font-lato text-xl leading-[120%] text-black">
+            <p className="text-center font-lato text-lg md:text-xl leading-[120%] text-black px-4">
               Our interns come from India's top colleges and leave with a portfolio of real-world projects. They don't just learn; they build, innovate, and get ready for their first job. Here are a few of their stories.
             </p>
-            <div className="flex gap-12 w-full">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full">
               {[1, 2, 3].map((item) => (
-                <div key={item} className="flex-1 border-2 border-black bg-white flex items-center justify-center py-[140px] px-[157px]">
-                  <p className="text-center font-open-sans text-2xl font-bold text-black leading-[130%]">
+                <div key={item} className="flex-1 border-2 border-black bg-white flex items-center justify-center py-16 md:py-[140px] px-8 md:px-[157px]">
+                  <p className="text-center font-open-sans text-xl md:text-2xl font-bold text-black leading-[130%]">
                     Social Proof
                   </p>
                 </div>
               ))}
             </div>
           </div>
-          <button className="bg-brand-blue text-white font-bold font-lato text-xl px-14 py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
+          <button className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
             Build Your Portfolio
           </button>
         </div>
