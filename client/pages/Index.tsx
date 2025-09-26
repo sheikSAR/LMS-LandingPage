@@ -233,10 +233,11 @@ export default function Index() {
       {/* Features Section 1 */}
       <section className="bg-white px-4 md:px-[120px] py-12 md:py-20 pb-8 md:pb-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-[92px]">
-          <img
+          <motion.img
             src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148"
             alt="Build Portfolio"
             className="w-full lg:w-[574px] h-64 md:h-96 lg:h-[534px] border border-black object-cover"
+            initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeUp}
           />
           <div className="w-full lg:w-[534px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
@@ -257,10 +258,11 @@ export default function Index() {
       {/* Features Section 2 */}
       <section className="bg-white px-4 md:px-[120px] py-8 md:py-10">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-[92px]">
-          <img
+          <motion.img
             src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148"
             alt="Get Referrals"
             className="w-full lg:w-[574px] h-64 md:h-96 lg:h-[534px] border border-black object-cover"
+            initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeUp}
           />
           <div className="w-full lg:w-[534px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
@@ -281,10 +283,11 @@ export default function Index() {
       {/* Features Section 3 */}
       <section className="bg-white px-4 md:px-[120px] py-8 md:py-10 pb-12 md:pb-20">
         <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-[92px]">
-          <img
+          <motion.img
             src="https://api.builder.io/api/v1/image/assets/TEMP/afe5d416c24f71b816c1706aa01ae3713e6b04fe?width=1148"
             alt="Expert Feedback"
             className="w-full lg:w-[574px] h-64 md:h-96 lg:h-[534px] border border-black object-cover"
+            initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeUp}
           />
           <div className="w-full lg:w-[534px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
