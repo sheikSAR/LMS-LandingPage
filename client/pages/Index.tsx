@@ -91,7 +91,7 @@ function Stars({ value }: { value: number }) {
 
 function TestimonialCard({ t }: { t: (typeof testimonials)[number] }) {
   return (
-    <motion.div variants={fadeUp} className="group overflow-hidden rounded-xl border border-black bg-white shadow-sm hover:shadow-xl transition-shadow">
+    <motion.div variants={fadeUp} whileHover={{ y: -6, scale: 1.01 }} className="group overflow-hidden rounded-xl border border-black/70 bg-white/80 backdrop-blur hover:bg-white shadow-sm hover:shadow-xl transition-all">
       <div className="relative aspect-[16/9] bg-black">
         <video
           src={t.videoUrl}
