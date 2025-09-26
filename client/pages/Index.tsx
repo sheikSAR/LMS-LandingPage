@@ -301,7 +301,7 @@ export default function Index() {
       </motion.section>
 
       {/* Certificate Section */}
-      <section className="w-full bg-white border border-black px-4 md:px-[90px] py-12 md:py-20">
+      <section className="w-full bg-white/80 backdrop-blur border border-black/10 rounded-2xl mx-auto px-4 md:px-[90px] py-12 md:py-20 shadow-sm">
         <div className="max-w-[836px] mx-auto flex flex-col items-center gap-6 md:gap-8">
           <div className="flex flex-col items-center gap-4">
             <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[44px] font-bold leading-[120%] text-black px-4">
