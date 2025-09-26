@@ -290,12 +290,13 @@ export default function Index() {
               ))}
             </div>
           </div>
-          <motion.button
+          <motion.a
+            href={CTA_URL}
             variants={fadeUp}
             className="bg-gradient-to-r from-brand-blue to-brand-blue-alt text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase shadow-lg hover:shadow-xl transition-all"
           >
             Build Your Portfolio
-          </motion.button>
+          </motion.a>
         </div>
       </motion.section>
 
