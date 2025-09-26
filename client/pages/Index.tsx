@@ -1,6 +1,16 @@
-import React, { useState } from 'react';
-import { ChevronDown, Check, Phone, Star } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useRef, useState } from 'react';
+import { ChevronDown, Check, Phone, Star, Linkedin, Youtube, Mail, MapPin } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+const CTA_URL = 'https://lms.broskieshub.com';
+
+function CtaLink({ children, className }: { children: React.ReactNode; className?: string }) {
+  return (
+    <a href={CTA_URL} className={className}>
+      {children}
+    </a>
+  );
+}
 
 const testimonials = [
   {
