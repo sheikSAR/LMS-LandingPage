@@ -146,8 +146,9 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="px-4 md:px-[90px] py-8 md:py-16">
-        <div className="max-w-[1303px] mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-20">
+      <section className="relative overflow-hidden px-4 md:px-[90px] py-8 md:py-16">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(39,39,230,0.15),transparent_60%)]" />
+        <div className="max-w-[1303px] relative mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-20">
           <div className="w-full lg:w-[586px] flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-4">
               <p className="text-[#333] font-lato text-lg md:text-xl leading-[150%]">
