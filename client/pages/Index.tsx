@@ -223,9 +223,9 @@ export default function Index() {
               You're caught in the Fresher's Paradox because degrees and tutorials aren't proof of skill. A real project is. As an Experience Accelerator, we provide the platform to build that project—the verifiable proof that beats the "experience required" trap and gets you hired.
             </p>
           </div>
-          <button className="bg-brand-blue-alt text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
+          <CtaLink className="bg-brand-blue-alt text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
             Start Building Your Experience
-          </button>
+          </CtaLink>
         </div>
       </section>
 
@@ -246,9 +246,9 @@ export default function Index() {
                 Our solution ensures you build a multi-dimensional portfolio that gets you hired. We do this through our proprietary 3-phase program that guides you from mastering foundational skills with hands-on tasks, to building a complete application from a real-world project brief, and finally, to creating a unique innovation project that showcases your personal creativity to employers.
               </p>
             </div>
-            <button className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
+            <CtaLink className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
               Build the Proof of Your Skills
-            </button>
+            </CtaLink>
           </div>
         </div>
       </section>
@@ -270,9 +270,9 @@ export default function Index() {
                 Our solution creates a direct path from experience to opportunity. We accomplish this by tracking your performance on real projects, creating a comprehensive skill profile that goes far beyond a resume, and sharing this verified profile directly with our network of partner companies who are actively hiring for roles that match your new experience.
               </p>
             </div>
-            <button className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
+            <CtaLink className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
               Unlock Job Opportunities
-            </button>
+            </CtaLink>
           </div>
         </div>
       </section>
@@ -294,9 +294,9 @@ export default function Index() {
                 Our solution provides a multi-layered support system to ensure you grow to a professional standard. Our unique approach involves providing instant, AI-powered feedback on daily tasks to accelerate your learning, conducting structured review sessions with industry mentors to guide your project development, and facilitating a community forum for continuous peer-to-peer support.
               </p>
             </div>
-            <button className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
+            <CtaLink className="bg-brand-blue-alt text-white font-bold font-lato text-sm md:text-base px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase self-start hover:bg-brand-blue transition-colors">
               Get Professional Feedback Now
-            </button>
+            </CtaLink>
           </div>
         </div>
       </section>
@@ -316,9 +316,9 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <button className="bg-brand-blue-alt text-white font-bold font-lato text-xl px-14 py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
+          <CtaLink className="bg-brand-blue-alt text-white font-bold font-lato text-xl px-14 py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
             Build Your Portfolio
-          </button>
+          </CtaLink>
         </div>
       </section>
 
@@ -384,9 +384,9 @@ export default function Index() {
               ))}
             </div>
           </div>
-          <button className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
+          <CtaLink className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
             Build Your Portfolio
-          </button>
+          </CtaLink>
         </div>
       </section>
 
@@ -425,9 +425,9 @@ export default function Index() {
               ))}
             </div>
           </div>
-          <button className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
+          <CtaLink className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
             Start Building Now (It's Free)
-          </button>
+          </CtaLink>
         </div>
       </section>
 
@@ -504,9 +504,9 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <button className="bg-brand-blue-alt text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
+                  <CtaLink className="bg-brand-blue-alt text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue transition-colors">
                     Start Building Now (It's Free)
-                  </button>
+                  </CtaLink>
                 </div>
               </div>
               <p className="text-[#333] font-lato text-sm md:text-base font-bold uppercase">
