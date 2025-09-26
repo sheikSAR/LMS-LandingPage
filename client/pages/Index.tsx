@@ -527,11 +527,52 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-white border border-black px-4 md:px-[90px] py-12 md:py-20">
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-8 md:gap-12">
-          <h2 className="max-w-[748px] text-center font-inter text-2xl md:text-3xl lg:text-[44px] font-bold leading-[120%] text-black px-4">
-            Footer
-          </h2>
+      <footer className="w-full bg-gradient-to-b from-white to-brand-gray/40 border-t border-black/10">
+        <div className="px-4 md:px-[90px] py-12 md:py-20">
+          <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div>
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/af5815d5c8e98fab36d2793c7dc62abb9e93d0ce?width=322" alt="BroskiesHub" className="h-8 mb-4" />
+              <p className="text-sm text-[#333] font-open-sans">Build the experience. Get the job.</p>
+            </div>
+
+            <div>
+              <h4 className="font-inter font-semibold text-lg mb-3">Quick Links</h4>
+              <ul className="space-y-2 text-[#333]">
+                <li><a href="/" className="hover:text-brand-blue transition-colors">Home</a></li>
+                <li><a href="#" className="hover:text-brand-blue transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-brand-blue transition-colors">Events</a></li>
+                <li><a href="#" className="hover:text-brand-blue transition-colors">Contact</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-inter font-semibold text-lg mb-3">Follow Us</h4>
+              <div className="flex items-center gap-4">
+                <a href="https://www.linkedin.com/company/broskieshub/" aria-label="LinkedIn" className="p-3 rounded-full bg-white/60 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md transition-all">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://youtube.com/@broskieshub?si=XIKWB9BrD5uzBEnN" aria-label="YouTube" className="p-3 rounded-full bg-white/60 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md transition-all">
+                  <Youtube className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-inter font-semibold text-lg mb-3">Contact</h4>
+              <ul className="space-y-3 text-[#333]">
+                <li className="flex items-start gap-3"><Mail className="w-5 h-5 mt-0.5" /><a className="hover:text-brand-blue" href="mailto:support@broskieshub.com">support@broskieshub.com</a></li>
+                <li className="flex items-center gap-3"><Phone className="w-5 h-5" /><a className="hover:text-brand-blue" href="tel:+918148040507">+918148040507</a></li>
+                <li className="flex items-start gap-3"><MapPin className="w-5 h-5 mt-0.5" /><span>Broskieshub, ACIC-KIF, KARE, Central Library 2nd Floor, Anand Nagar, Krishnan Koil, S.Ramachandrapuram Virudhunagar Srivilliputhur Tamil Nadu India 626126</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="max-w-[1200px] mx-auto mt-10 pt-6 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#333]">
+            <p>© {new Date().getFullYear()} BroskiesHub. All rights reserved.</p>
+            <div className="flex items-center gap-4">
+              <CtaLink className="text-brand-blue font-semibold hover:underline">Build Your Portfolio</CtaLink>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
