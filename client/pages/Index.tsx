@@ -174,14 +174,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="w-full lg:w-[637px] h-64 md:h-96 lg:h-[530px] border-2 border-black bg-white flex items-center justify-center">
+          <ParallaxBox className="w-full lg:w-[637px] h-64 md:h-96 lg:h-[530px] border-2 border-black/60 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)]">
             <div className="text-center px-8 md:px-[157px] py-8 md:py-[166px]">
               <p className="font-open-sans text-lg md:text-2xl text-black">
                 <span className="font-bold">Image or video </span>
                 that helps reinforce core value proposition and articulate what it is you do
               </p>
             </div>
-          </div>
+          </ParallaxBox>
         </div>
       </section>
 
@@ -515,14 +515,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="w-full lg:w-[637px] h-64 md:h-96 lg:h-[530px] border-2 border-black bg-white flex items-center justify-center">
+          <ParallaxBox className="w-full lg:w-[637px] h-64 md:h-96 lg:h-[530px] border-2 border-black/60 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)]">
             <div className="text-center px-8 md:px-[157px] py-8 md:py-[166px]">
               <p className="font-open-sans text-lg md:text-2xl text-black">
                 <span className="font-bold">Image or video </span>
                 that helps reinforce core value proposition and articulate what it is you do
               </p>
             </div>
-          </div>
+          </ParallaxBox>
         </div>
       </section>
 
