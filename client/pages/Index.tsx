@@ -163,9 +163,9 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <button className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
+                  <CtaLink className="bg-brand-blue text-white font-bold font-lato text-lg md:text-xl px-8 md:px-14 py-4 md:py-6 rounded-lg uppercase hover:bg-brand-blue-alt transition-colors">
                     Build Your Portfolio (It's Free)
-                  </button>
+                  </CtaLink>
                 </div>
               </div>
               <p className="text-[#333] font-lato text-sm md:text-base font-bold uppercase">
