@@ -239,7 +239,7 @@ export default function Index() {
 
           <ParallaxBox className="w-full h-[260px] sm:h-[360px] md:h-[420px] lg:h-[520px] rounded-2xl overflow-hidden border border-black/10 bg-white/70 backdrop-blur-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)]">
             <img
-              src="https://images.pexels.com/photos/33920044/pexels-photo-33920044.jpeg"
+              src="https://res.cloudinary.com/dk2wudmxh/image/upload/v1759230673/heroSec1_1_wx1ofa.jpg"
               alt="Students coding together in a modern classroom"
               className="w-full h-full object-cover"
               loading="eager"
@@ -391,7 +391,7 @@ export default function Index() {
       <section id="features" className="px-4 md:px-8 py-16 md:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.img
-            src="https://images.pexels.com/photos/5940710/pexels-photo-5940710.jpeg"
+            src="https://res.cloudinary.com/dk2wudmxh/image/upload/v1759230672/heroSec2_1_go3rbv.jpg"
             alt="Student learning with laptop in a collaborative classroom"
             className="w-full h-[260px] sm:h-[360px] md:h-[440px] object-cover rounded-2xl border border-black/10 shadow-md"
             initial="hidden"
@@ -711,7 +711,7 @@ export default function Index() {
           </div>
           <ParallaxBox className="w-full h-[260px] sm:h-[360px] md:h-[420px] lg:h-[520px] rounded-2xl overflow-hidden border border-black/10 bg-white/70 backdrop-blur-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)]">
             <img
-              src="https://images.pexels.com/photos/5940710/pexels-photo-5940710.jpeg"
+              src="https://res.cloudinary.com/dk2wudmxh/image/upload/v1759230671/heroSec3_1_x5bdpv.jpg"
               alt="Learners collaborating with laptops in a modern classroom"
               className="w-full h-full object-cover"
               loading="lazy"
