@@ -248,6 +248,99 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Our interns from - logos marquee */}
+      <section className="px-4 md:px-8 py-14 md:py-20 bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[40px] font-extrabold">Our interns from</h2>
+          <p className="mt-2 text-center text-gray-700">Universities across India trust our program.</p>
+
+          {(() => {
+            const logos = [
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227713/karunya-institute-of-technology-and-sciences-logo_qjcgqo.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227703/national-institute-of-technology-calicut-logo_fh1b65.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227686/cochin-university-of-science-and-technology-logo_rxlz1a.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227680/national-institute-of-technology-raipur-logo_dhsqey.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227673/jaypee-institute-of-information-technology-logo_aqedqf.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227661/maulana-azad-national-institute-of-technology-logo_ojxiwm.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227648/sastra-university-logo_yqccgo.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227644/university-of-mumbai-logo_ixgbci.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227638/indian-institute-of-information-technology-allahabad-logo_wyojfs.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227632/birla-institute-of-technology-logo_e21n9k.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227625/national-institute-of-technology-durgapur-logo_j4mwcw.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227619/malaviya-national-institute-of-technology-jaipur-logo_tgsy5g.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227615/annamalai-university-logo_a87r0m.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227610/pondicherry-university-logo_epdx6b.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227607/university-of-hyderabad-logo_adpq05.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227601/jawaharlal-nehru-university-logo_xaa5xk.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227595/sardar-vallabhbhai-national-institute-of-technology-surat-logo_hnq0rx.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227591/sathyabama-institute-of-science-and-technology-logo_to74fs.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227585/national-institute-of-technology-karnataka-logo_pyvxcg.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227582/saveetha-university-logo_fgesrj.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227576/indian-institute-of-technology-hyderabad-logo_afqygg.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227569/national-islamic-university-logo_yr1yah.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227566/chitkara-university-punjab-logo_eulo7q.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227561/lovely-professional-university-logo_snhy7w.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227558/university-of-calcutta-logo_ultona.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227552/aligarh-muslim-university-logo_c531m9.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227537/national-institute-of-technology-kurukshetra-logo_myrr6m.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227530/amity-university-logo_fxbltf.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227526/k-l-university-logo_cqkstn.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227520/birla-institute-of-technology-and-science-logo_a6czkc.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227512/tata-institute-of-fundamental-research-logo_el1uws.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227507/national-institute-of-technology-tiruchirappalli-logo_ntmuzt.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227497/delhi-technological-university-logo_npklbm.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227488/savitribai-phule-pune-university-logo_vqna8m.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227484/national-institute-of-technology-rourkela-logo_vsgwzi.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227479/indian-institute-of-technology-indore-logo_ypoa9o.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227473/indian-institute-of-technology-guwahati-logo_gxxri9.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227468/thapar-institute-of-engineering-and-technology-logo_gl8l1x.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227463/srm-institute-of-science-and-technology-logo_j9e34q.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227455/university-of-delhi-logo_pyeluu.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227445/amrita-university-logo_dqli4h.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227442/anna-university-logo_iexbst.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227437/jadavpur-university-logo_buvkfk.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227431/indian-institute-of-technology-roorkee-logo_tuije9.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227425/indian-institute-of-technology-madras-logo_lsql49.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227419/indian-institute-of-technology-bombay-logo_igg37n.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227414/indian-institute-of-technology-kanpur-logo_fym4aa.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227407/vit-university-logo_r4azah.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227398/indian-institute-of-technology-kharagpur-logo_fogefr.png",
+              "https://res.cloudinary.com/dk2wudmxh/image/upload/v1759227329/indian-institute-of-technology-delhi-logo_gjmraq.png",
+            ];
+            const row1 = logos.filter((_, i) => i % 2 === 0);
+            const row2 = logos.filter((_, i) => i % 2 !== 0);
+
+            const Logo = ({ src }: { src: string }) => (
+              <div className="shrink-0 rounded-xl bg-white/80 border border-black/10 p-3 md:p-4 backdrop-blur hover:shadow-lg hover:-translate-y-0.5 hover:scale-[1.04] transition-all">
+                <img src={src} alt="University logo" className="h-10 md:h-12 lg:h-14 w-auto object-contain" loading="lazy" />
+              </div>
+            );
+
+            const Row = ({ data, dir, speed }: { data: string[]; dir: "ltr" | "rtl"; speed: number }) => (
+              <div className="relative overflow-hidden">
+                <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+                <div
+                  className="flex min-w-max items-center gap-6 md:gap-10 lg:gap-12 will-change-transform"
+                  style={{ animation: `${dir === "rtl" ? "marquee-rtl" : "marquee-ltr"} ${speed}s linear infinite` }}
+                >
+                  {data.concat(data).map((logo, idx) => (
+                    <Logo key={`${logo}-${idx}`} src={logo} />
+                  ))}
+                </div>
+              </div>
+            );
+
+            return (
+              <div className="mt-8 space-y-6">
+                <Row data={row1} dir="ltr" speed={55} />
+                <Row data={row2} dir="rtl" speed={45} />
+              </div>
+            );
+          })()}
+        </div>
+      </section>
+
       {/* Metrics / Social proof */}
       <motion.section
         id="testimonials"
