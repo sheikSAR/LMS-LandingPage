@@ -628,10 +628,6 @@ export default function Index() {
           <div className="mt-8 divide-y divide-black/10">
             {[
               {
-                q: "Is the program really free?",
-                a: "Yes. Students pay nothing. Our model is built on companies paying to hire proven talent.",
-              },
-              {
                 q: "What do I need to get started?",
                 a: "A GitHub account, basic programming knowledge, and motivation to build and learn.",
               },
@@ -703,8 +699,8 @@ export default function Index() {
             </div>
             <div className="mt-6 flex gap-3">
               <CtaLink className={primaryBtn}>Start Building (Free)</CtaLink>
-              <a href="#pricing" className={outlineBtn}>
-                View Pricing
+              <a href="#faq" className={outlineBtn}>
+                See FAQs
               </a>
             </div>
             <p className="mt-2 text-xs md:text-sm font-semibold uppercase text-[#333]">100% Free. No certificate fee.</p>
