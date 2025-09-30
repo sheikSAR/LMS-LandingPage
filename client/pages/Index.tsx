@@ -355,6 +355,7 @@ export default function Index() {
               { label: "Colleges", value: "100+" },
               { label: "Projects Shipped", value: "1,200+" },
               // { label: "Placements & Referrals", value: "500+" },
+              { label: "Tie-up Companies", value: "150+" },
             ].map((m) => (
               <motion.div
                 key={m.label}
