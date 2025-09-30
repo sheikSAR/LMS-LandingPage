@@ -648,7 +648,7 @@ export default function Index() {
           <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/af5815d5c8e98fab36d2793c7dc62abb9e93d0ce?width=322"
+                src="https://res.cloudinary.com/dk2wudmxh/image/upload/v1759233080/BroskiesHub_Incubated_Logo_bwrago.png"
                 alt="BroskiesHub"
                 className="h-8 mb-4"
               />
