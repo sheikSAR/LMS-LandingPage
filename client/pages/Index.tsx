@@ -469,9 +469,9 @@ export default function Index() {
                 icon: <Users className="text-brand-blue" />,
               },
               {
-                title: "100% free & accessible",
+                title: "Accessible to everyone",
                 description:
-                  "Companies pay to hire proven talent. Students pay nothing.",
+                  "Open access program focused on real skills and outcomes.",
                 icon: <ShieldCheck className="text-brand-blue" />,
               },
               {
@@ -541,7 +541,7 @@ export default function Index() {
             ))}
           </div>
           <div className="mt-8 flex justify-center">
-            <CtaLink className={primaryBtn}>Start Now (It’s Free)</CtaLink>
+            <CtaLink className={primaryBtn}>Start Now</CtaLink>
           </div>
         </div>
       </section>
