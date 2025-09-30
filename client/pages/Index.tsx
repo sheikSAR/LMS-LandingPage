@@ -181,7 +181,7 @@ export default function Index() {
         <div className="max-w-[1300px] mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3">
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/af5815d5c8e98fab36d2793c7dc62abb9e93d0ce?width=322"
+              src="https://res.cloudinary.com/dk2wudmxh/image/upload/v1759233080/BroskiesHub_Incubated_Logo_bwrago.png"
               alt="BroskiesHub Logo"
               className="h-7 md:h-8"
             />
