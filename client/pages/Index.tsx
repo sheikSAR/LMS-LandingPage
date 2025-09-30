@@ -699,13 +699,6 @@ export default function Index() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://twitter.com/broskieshub"
-                  aria-label="Twitter"
-                  className="p-3 rounded-full bg-white/70 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue transition-all"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
                   href="https://instagram.com/broskieshub"
                   aria-label="Instagram"
                   className="p-3 rounded-full bg-white/70 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue transition-all"
