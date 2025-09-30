@@ -250,7 +250,7 @@ export default function Index() {
       <section className="px-4 md:px-8 py-14 md:py-20 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[40px] font-extrabold">Our interns from</h2>
-          <p className="mt-2 text-center text-gray-700">Universities across India trust our program.</p>
+          <p className="mt-2 text-center text-gray-700">Students from universities across India trust our program.</p>
 
           {(() => {
             const logos = [
