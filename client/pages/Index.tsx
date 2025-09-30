@@ -5,7 +5,9 @@ import {
   Phone,
   Star,
   Linkedin,
-  Youtube,
+  Facebook,
+  Twitter,
+  Instagram,
   Mail,
   MapPin,
   Rocket,
@@ -166,7 +168,6 @@ export default function Index() {
     () => [
       { href: "#features", label: "Features" },
       { href: "#testimonials", label: "Stories" },
-      { href: "#pricing", label: "Pricing" },
       { href: "#faq", label: "FAQ" },
       { href: "#contact", label: "Contact" },
     ],
@@ -227,14 +228,11 @@ export default function Index() {
               portfolio on GitHub, and unlock direct referrals to hiring startups.
             </motion.p>
             <motion.div variants={fadeUp} className="mt-6 flex flex-wrap gap-3">
-              <CtaLink className={primaryBtn}>Build Your Portfolio (Free)</CtaLink>
+              <CtaLink className={primaryBtn}>Build Your Portfolio</CtaLink>
               <a href="#features" className={outlineBtn}>
                 Explore Features
               </a>
             </motion.div>
-            <motion.p variants={fadeUp} className="mt-3 text-xs md:text-sm font-semibold uppercase text-[#333]">
-              100% Free. No certificate fee.
-            </motion.p>
           </motion.div>
 
           <ParallaxBox className="w-full h-[260px] sm:h-[360px] md:h-[420px] lg:h-[520px] rounded-2xl overflow-hidden border border-black/10 bg-white/70 backdrop-blur-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)]">
@@ -502,7 +500,7 @@ export default function Index() {
             ))}
           </div>
           <div className="mt-10 flex justify-center">
-            <CtaLink className={primaryBtn}>Start Building (Free)</CtaLink>
+            <CtaLink className={primaryBtn}>Start Building</CtaLink>
           </div>
         </div>
       </section>
@@ -548,78 +546,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="px-4 md:px-8 py-16 md:py-24 bg-gradient-to-b from-white/70 to-brand-gray/40 border-y border-black/10">
-        <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[40px] font-extrabold">Simple pricing</h2>
-          <p className="mt-2 text-center text-gray-700 max-w-xl mx-auto">Designed for students and teams. Start free and upgrade when you need more.</p>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {[
-              {
-                name: "Starter",
-                price: "Free",
-                highlight: "Best for beginners",
-                features: ["Full 3‑phase program", "AI task feedback", "Community access", "Certificate included"],
-                cta: "Get Started",
-                popular: false,
-              },
-              {
-                name: "Pro",
-                price: "₹999/mo",
-                highlight: "Most popular",
-                features: ["Mentor reviews", "Mock interviews", "Project deployment support", "Priority support"],
-                cta: "Upgrade to Pro",
-                popular: true,
-              },
-              {
-                name: "Teams",
-                price: "Talk to us",
-                highlight: "For colleges & startups",
-                features: ["Cohort management", "Custom briefs", "Dedicated mentor", "Hiring partnership"],
-                cta: "Contact Sales",
-                popular: false,
-              },
-            ].map((tier) => (
-              <motion.div
-                key={tier.name}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeUp}
-                whileHover={{ y: -8 }}
-                className={`relative rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-6 shadow-sm hover:shadow-2xl transition-all ${
-                  tier.popular ? "ring-1 ring-brand-blue/30" : ""
-                }`}
-              >
-                {tier.popular && (
-                  <span className="absolute -top-3 left-6 inline-flex items-center rounded-full bg-brand-blue text-white text-xs font-semibold px-3 py-1 shadow">
-                    Popular
-                  </span>
-                )}
-                <h3 className="font-semibold text-lg">{tier.name}</h3>
-                <p className="text-sm text-gray-600">{tier.highlight}</p>
-                <p className="mt-4 font-inter text-3xl font-extrabold">{tier.price}</p>
-                <ul className="mt-4 space-y-3">
-                  {tier.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
-                      <Check className="w-4 h-4 text-brand-blue mt-0.5" /> {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  {tier.name === "Teams" ? (
-                    <a href="#contact" className={outlineBtn}>
-                      {tier.cta}
-                    </a>
-                  ) : (
-                    <CtaLink className={primaryBtn}>{tier.cta}</CtaLink>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section id="faq" className="px-4 md:px-8 py-16 md:py-24 bg-white">
@@ -698,12 +624,11 @@ export default function Index() {
               ))}
             </div>
             <div className="mt-6 flex gap-3">
-              <CtaLink className={primaryBtn}>Start Building (Free)</CtaLink>
+              <CtaLink className={primaryBtn}>Start Building</CtaLink>
               <a href="#faq" className={outlineBtn}>
                 See FAQs
               </a>
             </div>
-            <p className="mt-2 text-xs md:text-sm font-semibold uppercase text-[#333]">100% Free. No certificate fee.</p>
           </div>
           <ParallaxBox className="w-full h-[260px] sm:h-[360px] md:h-[420px] lg:h-[520px] rounded-2xl overflow-hidden border border-black/10 bg-white/70 backdrop-blur-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)]">
             <img
@@ -738,8 +663,8 @@ export default function Index() {
                   </a>
                 </li>
                 <li>
-                  <a href="#pricing" className="hover:text-brand-blue transition-colors">
-                    Pricing
+                  <a href="#testimonials" className="hover:text-brand-blue transition-colors">
+                    Stories
                   </a>
                 </li>
                 <li>
@@ -757,20 +682,34 @@ export default function Index() {
 
             <div>
               <h4 className="font-inter font-semibold text-lg mb-3">Follow Us</h4>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <a
+                  href="https://facebook.com/broskieshub"
+                  aria-label="Facebook"
+                  className="p-3 rounded-full bg-white/70 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue transition-all"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
                 <a
                   href="https://www.linkedin.com/company/broskieshub/"
                   aria-label="LinkedIn"
-                  className="p-3 rounded-full bg-white/60 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md transition-all"
+                  className="p-3 rounded-full bg-white/70 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue transition-all"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://youtube.com/@broskieshub?si=XIKWB9BrD5uzBEnN"
-                  aria-label="YouTube"
-                  className="p-3 rounded-full bg-white/60 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md transition-all"
+                  href="https://twitter.com/broskieshub"
+                  aria-label="Twitter"
+                  className="p-3 rounded-full bg-white/70 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue transition-all"
                 >
-                  <Youtube className="w-5 h-5" />
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://instagram.com/broskieshub"
+                  aria-label="Instagram"
+                  className="p-3 rounded-full bg-white/70 backdrop-blur border border-black/10 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue transition-all"
+                >
+                  <Instagram className="w-5 h-5" />
                 </a>
               </div>
             </div>
