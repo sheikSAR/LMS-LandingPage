@@ -21,7 +21,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const CTA_URL = "https://lms.broskieshub.com";
 
-function CtaLink({ children, className }: { children: React.ReactNode; className?: string }) {
+function CtaLink({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <a href={CTA_URL} className={className}>
       {children}
@@ -29,9 +35,18 @@ function CtaLink({ children, className }: { children: React.ReactNode; className
   );
 }
 
-function ParallaxBox({ children, className }: { children: React.ReactNode; className?: string }) {
+function ParallaxBox({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
   const y = useTransform(scrollYProgress, [0, 1], [0, -40]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.025]);
   return (
@@ -115,13 +130,19 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
 
 function Stars({ value }: { value: number }) {
   return (
     <div className="flex items-center gap-1">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className={`w-4 h-4 ${i < value ? "text-yellow-500 fill-yellow-500" : "text-gray-300"}`} />
+        <Star
+          key={i}
+          className={`w-4 h-4 ${i < value ? "text-yellow-500 fill-yellow-500" : "text-gray-300"}`}
+        />
       ))}
     </div>
   );
@@ -135,16 +156,30 @@ function TestimonialCard({ t }: { t: (typeof testimonials)[number] }) {
       className="group overflow-hidden rounded-2xl border border-black/10 bg-white/80 backdrop-blur-xl hover:bg-white shadow-sm hover:shadow-xl transition-all"
     >
       <div className="relative aspect-[16/9]">
-        <video src={t.videoUrl} controls playsInline preload="metadata" className="w-full h-full object-cover" />
+        <video
+          src={t.videoUrl}
+          controls
+          playsInline
+          preload="metadata"
+          className="w-full h-full object-cover"
+        />
       </div>
       <div className="p-5 flex flex-col gap-2">
         <div className="flex items-center justify-between">
-          <h4 className="font-inter font-semibold text-lg md:text-xl text-black">{t.studentName}</h4>
+          <h4 className="font-inter font-semibold text-lg md:text-xl text-black">
+            {t.studentName}
+          </h4>
           <Stars value={t.rating} />
         </div>
-        <p className="text-sm md:text-base text-[#333] font-lato">{t.college}</p>
-        <p className="text-xs md:text-sm font-medium text-brand-blue uppercase">{t.course}</p>
-        <p className="text-sm md:text-base text-subtext font-open-sans mt-1">{t.testimonialText}</p>
+        <p className="text-sm md:text-base text-[#333] font-lato">
+          {t.college}
+        </p>
+        <p className="text-xs md:text-sm font-medium text-brand-blue uppercase">
+          {t.course}
+        </p>
+        <p className="text-sm md:text-base text-subtext font-open-sans mt-1">
+          {t.testimonialText}
+        </p>
       </div>
     </motion.div>
   );
@@ -157,7 +192,8 @@ const outlineBtn =
 
 export default function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const toggleFaq = (index: number) => setOpenFaq(openFaq === index ? null : index);
+  const toggleFaq = (index: number) =>
+    setOpenFaq(openFaq === index ? null : index);
 
   // Hero subtle parallax blobs
   const { scrollY } = useScroll();
@@ -201,7 +237,9 @@ export default function Index() {
           <div className="flex items-center gap-2 md:gap-4">
             <div className="hidden sm:flex items-center gap-2 md:gap-3 bg-brand-blue text-white rounded-full px-3 md:px-5 py-2 shadow-sm hover:shadow-md transition-all">
               <Phone className="w-4 h-4 md:w-5 md:h-5" />
-              <span className="text-[13px] md:text-sm font-bold">+918148040507</span>
+              <span className="text-[13px] md:text-sm font-bold">
+                +918148040507
+              </span>
             </div>
             <button className={outlineBtn}>For Companies</button>
           </div>
@@ -210,12 +248,27 @@ export default function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <motion.div style={{ y: blob1Y }} className="pointer-events-none absolute -top-24 -left-24 size-[420px] rounded-full opacity-60 blur-3xl bg-gradient-to-br from-brand-blue/30 to-brand-blue-alt/20" />
-        <motion.div style={{ y: blob2Y }} className="pointer-events-none absolute -bottom-20 -right-24 size-[360px] rounded-full opacity-60 blur-3xl bg-gradient-to-tr from-[#241B41]/20 to-brand-blue/10" />
+        <motion.div
+          style={{ y: blob1Y }}
+          className="pointer-events-none absolute -top-24 -left-24 size-[420px] rounded-full opacity-60 blur-3xl bg-gradient-to-br from-brand-blue/30 to-brand-blue-alt/20"
+        />
+        <motion.div
+          style={{ y: blob2Y }}
+          className="pointer-events-none absolute -bottom-20 -right-24 size-[360px] rounded-full opacity-60 blur-3xl bg-gradient-to-tr from-[#241B41]/20 to-brand-blue/10"
+        />
         <div className="max-w-[1300px] mx-auto px-4 md:px-8 py-10 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={stagger}>
-            <motion.p variants={fadeUp} className="text-[#333] font-lato text-base md:text-lg">
-              Join over 2700+ students from 100+ colleges elevating their careers with us.
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={stagger}
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-[#333] font-lato text-base md:text-lg"
+            >
+              Join over 2700+ students from 100+ colleges elevating their
+              careers with us.
             </motion.p>
             <motion.h1
               variants={fadeUp}
@@ -223,9 +276,13 @@ export default function Index() {
             >
               Build the Experience. Get the Job.
             </motion.h1>
-            <motion.p variants={fadeUp} className="mt-5 text-[#333] font-open-sans text-base md:text-lg leading-relaxed">
-              Go beyond theory with a project-first, mentor-guided program. Ship production-grade work, grow a job-ready
-              portfolio on GitHub, and unlock direct referrals to hiring startups.
+            <motion.p
+              variants={fadeUp}
+              className="mt-5 text-[#333] font-open-sans text-base md:text-lg leading-relaxed"
+            >
+              Go beyond theory with a project-first, mentor-guided program. Ship
+              production-grade work, grow a job-ready portfolio on GitHub, and
+              unlock direct referrals to hiring startups.
             </motion.p>
             <motion.div variants={fadeUp} className="mt-6 flex flex-wrap gap-3">
               <CtaLink className={primaryBtn}>Build Your Portfolio</CtaLink>
@@ -249,8 +306,12 @@ export default function Index() {
       {/* Our interns from - logos marquee */}
       <section className="px-4 md:px-8 py-14 md:py-20 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[40px] font-extrabold">Our interns from</h2>
-          <p className="mt-2 text-center text-gray-700">Students from universities across India trust our program.</p>
+          <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[40px] font-extrabold">
+            Our interns from
+          </h2>
+          <p className="mt-2 text-center text-gray-700">
+            Students from universities across India trust our program.
+          </p>
 
           {(() => {
             const logos = [
@@ -310,17 +371,32 @@ export default function Index() {
 
             const Logo = ({ src }: { src: string }) => (
               <div className="shrink-0 rounded-xl bg-white/80 border border-black/10 p-3 md:p-4 backdrop-blur hover:shadow-lg hover:-translate-y-0.5 hover:scale-[1.04] transition-all">
-                <img src={src} alt="University logo" className="h-10 md:h-12 lg:h-14 w-auto object-contain" loading="lazy" />
+                <img
+                  src={src}
+                  alt="University logo"
+                  className="h-10 md:h-12 lg:h-14 w-auto object-contain"
+                  loading="lazy"
+                />
               </div>
             );
 
-            const Row = ({ data, dir, speed }: { data: string[]; dir: "ltr" | "rtl"; speed: number }) => (
+            const Row = ({
+              data,
+              dir,
+              speed,
+            }: {
+              data: string[];
+              dir: "ltr" | "rtl";
+              speed: number;
+            }) => (
               <div className="relative overflow-hidden">
                 <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent pointer-events-none" />
                 <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none" />
                 <div
                   className="flex min-w-max items-center gap-6 md:gap-10 lg:gap-12 will-change-transform"
-                  style={{ animation: `${dir === "rtl" ? "marquee-rtl" : "marquee-ltr"} ${speed}s linear infinite` }}
+                  style={{
+                    animation: `${dir === "rtl" ? "marquee-rtl" : "marquee-ltr"} ${speed}s linear infinite`,
+                  }}
                 >
                   {data.concat(data).map((logo, idx) => (
                     <Logo key={`${logo}-${idx}`} src={logo} />
@@ -363,16 +439,26 @@ export default function Index() {
                 whileHover={{ y: -4 }}
                 className="rounded-2xl bg-white/70 backdrop-blur-xl p-5 border border-black/10 shadow-sm hover:shadow-lg transition-all"
               >
-                <p className="text-[12px] uppercase tracking-wide text-gray-600">{m.label}</p>
-                <p className="mt-1 font-inter text-2xl md:text-3xl font-extrabold text-black">{m.value}</p>
+                <p className="text-[12px] uppercase tracking-wide text-gray-600">
+                  {m.label}
+                </p>
+                <p className="mt-1 font-inter text-2xl md:text-3xl font-extrabold text-black">
+                  {m.value}
+                </p>
               </motion.div>
             ))}
           </div>
 
-          <motion.h2 variants={fadeUp} className="text-center font-inter text-2xl md:text-3xl lg:text-[44px] font-bold">
+          <motion.h2
+            variants={fadeUp}
+            className="text-center font-inter text-2xl md:text-3xl lg:text-[44px] font-bold"
+          >
             What our interns say
           </motion.h2>
-          <motion.p variants={fadeUp} className="mt-2 mb-8 text-center text-gray-700 max-w-2xl mx-auto">
+          <motion.p
+            variants={fadeUp}
+            className="mt-2 mb-8 text-center text-gray-700 max-w-2xl mx-auto"
+          >
             Real stories from students who turned projects into offers.
           </motion.p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -399,20 +485,45 @@ export default function Index() {
             variants={fadeUp}
             loading="lazy"
           />
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger}>
-            <motion.h3 variants={fadeUp} className="font-inter text-[28px] md:text-[36px] font-extrabold">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={stagger}
+          >
+            <motion.h3
+              variants={fadeUp}
+              className="font-inter text-[28px] md:text-[36px] font-extrabold"
+            >
               A modern, project-first path to job readiness
             </motion.h3>
             <motion.p variants={fadeUp} className="mt-3 text-gray-700">
-              Master fundamentals with hands-on tasks, ship a real product from a professional brief, and craft an
-              innovation project that showcases your unique creativity.
+              Master fundamentals with hands-on tasks, ship a real product from
+              a professional brief, and craft an innovation project that
+              showcases your unique creativity.
             </motion.p>
             <div className="mt-6 grid sm:grid-cols-2 gap-4 md:gap-6">
               {[
-                { icon: <Rocket className="text-brand-blue" />, title: "Guided real projects", desc: "Build complete apps end‑to‑end from industry briefs." },
-                { icon: <Code2 className="text-brand-blue" />, title: "Production-grade code", desc: "Follow reviews and best practices used by teams." },
-                { icon: <Users className="text-brand-blue" />, title: "Mentor feedback", desc: "AI quick checks + expert reviews to level up." },
-                { icon: <ShieldCheck className="text-brand-blue" />, title: "Referrals that count", desc: "Top performers shared with hiring networks." },
+                {
+                  icon: <Rocket className="text-brand-blue" />,
+                  title: "Guided real projects",
+                  desc: "Build complete apps end‑to‑end from industry briefs.",
+                },
+                {
+                  icon: <Code2 className="text-brand-blue" />,
+                  title: "Production-grade code",
+                  desc: "Follow reviews and best practices used by teams.",
+                },
+                {
+                  icon: <Users className="text-brand-blue" />,
+                  title: "Mentor feedback",
+                  desc: "AI quick checks + expert reviews to level up.",
+                },
+                {
+                  icon: <ShieldCheck className="text-brand-blue" />,
+                  title: "Referrals that count",
+                  desc: "Top performers shared with hiring networks.",
+                },
               ].map((f) => (
                 <motion.div
                   key={f.title}
@@ -420,7 +531,9 @@ export default function Index() {
                   whileHover={{ y: -4 }}
                   className="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-4 shadow-sm hover:shadow-md transition-all"
                 >
-                  <div className="p-2 rounded-full bg-brand-blue/10">{f.icon}</div>
+                  <div className="p-2 rounded-full bg-brand-blue/10">
+                    {f.icon}
+                  </div>
                   <div>
                     <p className="font-semibold">{f.title}</p>
                     <p className="text-sm text-gray-700">{f.desc}</p>
@@ -429,7 +542,9 @@ export default function Index() {
               ))}
             </div>
             <div className="mt-6">
-              <CtaLink className={primaryBtn}>Build the Proof of Your Skills</CtaLink>
+              <CtaLink className={primaryBtn}>
+                Build the Proof of Your Skills
+              </CtaLink>
             </div>
           </motion.div>
         </div>
@@ -442,7 +557,8 @@ export default function Index() {
             Go beyond courses. Ship real products.
           </h2>
           <p className="mt-2 text-center text-gray-700 max-w-2xl mx-auto">
-            Our 3‑phase method takes you from foundations to a standout innovation project with a portfolio recruiters love.
+            Our 3‑phase method takes you from foundations to a standout
+            innovation project with a portfolio recruiters love.
           </p>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
@@ -460,7 +576,8 @@ export default function Index() {
               },
               {
                 title: "Mentorship & expert reviews",
-                description: "AI feedback daily + structured mentor reviews for big milestones.",
+                description:
+                  "AI feedback daily + structured mentor reviews for big milestones.",
                 icon: <Award className="text-brand-blue" />,
               },
               {
@@ -491,10 +608,14 @@ export default function Index() {
                 className="rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-6 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1"
               >
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-full bg-brand-blue/10">{feature.icon}</div>
+                  <div className="p-2 rounded-full bg-brand-blue/10">
+                    {feature.icon}
+                  </div>
                   <div>
                     <h3 className="font-semibold">{feature.title}</h3>
-                    <p className="text-sm text-gray-700">{feature.description}</p>
+                    <p className="text-sm text-gray-700">
+                      {feature.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -516,13 +637,19 @@ export default function Index() {
             {[
               {
                 title: "Build your foundation",
-                description: "Hands‑on tasks with instant AI feedback to accelerate learning.",
+                description:
+                  "Hands‑on tasks with instant AI feedback to accelerate learning.",
               },
               {
                 title: "Create your portfolio",
-                description: "Ship a complete real‑world application that becomes your centerpiece.",
+                description:
+                  "Ship a complete real‑world application that becomes your centerpiece.",
               },
-              { title: "Connect to opportunity", description: "Top performance earns direct referrals to hiring startups." },
+              {
+                title: "Connect to opportunity",
+                description:
+                  "Top performance earns direct referrals to hiring startups.",
+              },
             ].map((step, i) => (
               <motion.div
                 key={step.title}
@@ -547,11 +674,12 @@ export default function Index() {
         </div>
       </section>
 
-
       {/* FAQ */}
       <section id="faq" className="px-4 md:px-8 py-16 md:py-24 bg-white">
         <div className="max-w-[900px] mx-auto">
-          <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[40px] font-extrabold">Frequently asked questions</h2>
+          <h2 className="text-center font-inter text-2xl md:text-3xl lg:text-[40px] font-extrabold">
+            Frequently asked questions
+          </h2>
           <div className="mt-8 divide-y divide-black/10">
             {[
               {
@@ -580,15 +708,24 @@ export default function Index() {
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full flex items-center justify-between text-left"
                 >
-                  <h3 className="font-inter text-base md:text-lg font-semibold text-dark-blue">{item.q}</h3>
-                  <ChevronDown className={`w-4 h-4 text-[#333] transition-transform ${openFaq === idx ? "rotate-180" : ""}`} />
+                  <h3 className="font-inter text-base md:text-lg font-semibold text-dark-blue">
+                    {item.q}
+                  </h3>
+                  <ChevronDown
+                    className={`w-4 h-4 text-[#333] transition-transform ${openFaq === idx ? "rotate-180" : ""}`}
+                  />
                 </button>
                 <motion.div
                   initial={false}
-                  animate={{ height: openFaq === idx ? "auto" : 0, opacity: openFaq === idx ? 1 : 0 }}
+                  animate={{
+                    height: openFaq === idx ? "auto" : 0,
+                    opacity: openFaq === idx ? 1 : 0,
+                  }}
                   className="overflow-hidden"
                 >
-                  <p className="mt-2 text-sm md:text-base text-gray-700">{item.a}</p>
+                  <p className="mt-2 text-sm md:text-base text-gray-700">
+                    {item.a}
+                  </p>
                 </motion.div>
               </div>
             ))}
@@ -601,14 +738,15 @@ export default function Index() {
         <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <p className="text-[#333] font-lato text-base md:text-lg">
-              90% of tech recruiters reject profiles without real‑world projects.
+              90% of tech recruiters reject profiles without real‑world
+              projects.
             </p>
             <h2 className="mt-2 font-inter text-[28px] md:text-[36px] lg:text-[42px] font-extrabold">
               Your career won’t wait. Start building today.
             </h2>
             <p className="mt-4 text-[#333] font-open-sans text-base md:text-lg leading-relaxed">
-              Move from theory to a tangible, job‑winning portfolio. Join a community of makers shipping real work and
-              unlocking interviews.
+              Move from theory to a tangible, job‑winning portfolio. Join a
+              community of makers shipping real work and unlocking interviews.
             </p>
             <div className="mt-4 space-y-2">
               {[
@@ -620,7 +758,9 @@ export default function Index() {
                   <div className="w-6 h-6 bg-brand-blue/10 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-brand-blue" />
                   </div>
-                  <span className="font-inter text-sm md:text-base text-[#333]">{line}</span>
+                  <span className="font-inter text-sm md:text-base text-[#333]">
+                    {line}
+                  </span>
                 </div>
               ))}
             </div>
@@ -643,7 +783,10 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="w-full bg-gradient-to-b from-white to-brand-gray/40 border-t border-black/10">
+      <footer
+        id="contact"
+        className="w-full bg-gradient-to-b from-white to-brand-gray/40 border-t border-black/10"
+      >
         <div className="px-4 md:px-8 py-12 md:py-20">
           <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
@@ -652,29 +795,45 @@ export default function Index() {
                 alt="BroskiesHub"
                 className="h-8 mb-4"
               />
-              <p className="text-sm text-[#333] font-open-sans">Build the experience. Get the job.</p>
+              <p className="text-sm text-[#333] font-open-sans">
+                Build the experience. Get the job.
+              </p>
             </div>
 
             <div>
-              <h4 className="font-inter font-semibold text-lg mb-3">Quick Links</h4>
+              <h4 className="font-inter font-semibold text-lg mb-3">
+                Quick Links
+              </h4>
               <ul className="space-y-2 text-[#333]">
                 <li>
-                  <a href="#features" className="hover:text-brand-blue transition-colors">
+                  <a
+                    href="#features"
+                    className="hover:text-brand-blue transition-colors"
+                  >
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#testimonials" className="hover:text-brand-blue transition-colors">
+                  <a
+                    href="#testimonials"
+                    className="hover:text-brand-blue transition-colors"
+                  >
                     Stories
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="hover:text-brand-blue transition-colors">
+                  <a
+                    href="#faq"
+                    className="hover:text-brand-blue transition-colors"
+                  >
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-brand-blue transition-colors">
+                  <a
+                    href="#contact"
+                    className="hover:text-brand-blue transition-colors"
+                  >
                     Contact
                   </a>
                 </li>
@@ -682,7 +841,9 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-inter font-semibold text-lg mb-3">Follow Us</h4>
+              <h4 className="font-inter font-semibold text-lg mb-3">
+                Follow Us
+              </h4>
               <div className="flex items-center gap-3 sm:gap-4">
                 <a
                   href="https://facebook.com/broskieshub"
@@ -713,7 +874,10 @@ export default function Index() {
               <ul className="space-y-3 text-[#333]">
                 <li className="flex items-start gap-3">
                   <Mail className="w-5 h-5 mt-0.5" />
-                  <a className="hover:text-brand-blue" href="mailto:support@broskieshub.com">
+                  <a
+                    className="hover:text-brand-blue"
+                    href="mailto:support@broskieshub.com"
+                  >
                     support@broskieshub.com
                   </a>
                 </li>
@@ -726,8 +890,9 @@ export default function Index() {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 mt-0.5" />
                   <span>
-                    Broskieshub, ACIC-KIF, KARE, Central Library 2nd Floor, Anand Nagar, Krishnan Koil, S.Ramachandrapuram
-                    Virudhunagar Srivilliputhur Tamil Nadu India 626126
+                    Broskieshub, ACIC-KIF, KARE, Central Library 2nd Floor,
+                    Anand Nagar, Krishnan Koil, S.Ramachandrapuram Virudhunagar
+                    Srivilliputhur Tamil Nadu India 626126
                   </span>
                 </li>
               </ul>
@@ -735,9 +900,13 @@ export default function Index() {
           </div>
 
           <div className="max-w-[1200px] mx-auto mt-10 pt-6 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#333]">
-            <p>© {new Date().getFullYear()} BroskiesHub. All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} BroskiesHub. All rights reserved.
+            </p>
             <div className="flex items-center gap-4">
-              <CtaLink className="text-brand-blue font-semibold hover:underline">Build Your Portfolio</CtaLink>
+              <CtaLink className="text-brand-blue font-semibold hover:underline">
+                Build Your Portfolio
+              </CtaLink>
             </div>
           </div>
         </div>
